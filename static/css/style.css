@@ -1,0 +1,106 @@
+/* Custom styles for navbar hover */
+        .navbar-nav .nav-link:hover {
+            color: #ffffff;
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+
+        /* Sidebar styles */
+        #sidebar {
+            height: 100vh;
+            background-color: #f8f9fa;
+            border-right: 1px solid #ddd;
+            padding-top: 20px;
+        }
+
+        #sidebar .nav-link {
+            color: #495057;
+        }
+
+        #sidebar .nav-link:hover {
+            color: #007bff;
+            font-weight: bold;
+        }
+
+        /* Content area */
+        #content {
+            padding: 20px;
+        }
+		
+.menuSD {
+  color: white;
+  background-color: #0975C3;
+  border-radius: 5px;
+  font-size: 16px;
+  padding-left: 11px;
+  padding-right: 4px;
+  padding-bottom: 6px;
+  padding-top: 6px;
+  line-height: 120%;
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* Table container */
+.table-container {
+    margin: 20px;
+    overflow-x: auto; /* Pour permettre le défilement horizontal sur petits écrans */
+}
+
+/* Style général de la table */
+.table-custom {
+    width: 100%;
+    border-collapse: collapse; /* Supprime les espaces entre les cellules */
+    border: 1px solid #ddd; /* Bordure légère autour de la table */
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+/* Style du thead */
+.table-custom thead {
+    background-color: #007bff; /* Couleur proche de Bootstrap primary */
+    color: white;
+    text-align: left;
+    font-weight: bold;
+}
+
+/* Cellules du thead */
+.table-custom thead th {
+    padding: 10px 15px;
+    border-bottom: 2px solid #0056b3; /* Couleur légèrement plus foncée pour l'effet */
+}
+
+/* Style des cellules */
+.table-custom td,
+.table-custom th {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+/* Effet de survol des lignes */
+.table-custom tbody tr:hover {
+    background-color: #f1f1f1; /* Gris clair au survol */
+}
+
+/* Alternance des couleurs pour les lignes */
+.table-custom tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Gris très clair */
+}
+
+/* Cellules spécifiques */
+.table-custom tbody td {
+    color: #333; /* Texte sombre pour les cellules */
+}
+
+button{
+    height: 35px;
+    width: 175px;
+    margin-bottom: 3px;
+}
+
+.custom-button {
+    width: 120px;
+    height: 30px;
+    padding-top: 2px;
+}

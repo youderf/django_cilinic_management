@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<h2>Patient Details</h2>
+    <table border="0">
+    <tr>
+        <td>
+            <pre>
+    <strong>ID                :    </strong> {{ patient.id }}
+    <strong>Name              :    </strong> {{ patient.name }}
+    <strong>Email             :    </strong> {{ patient.email }}
+    <strong>Phone             :    </strong> {{ patient.phone }}
+    <strong>Gender            :    </strong> {{ patient.gender }}
+    <strong>Address           :    </strong> {{ patient.address }}
+    <strong>Age               :    </strong> {{ patient.age }}
+    <strong>weight            :    </strong> {{ patient.weight }}
+    <strong>First Visit       :    </strong> {{ patient.first_visit_date }}
+    <strong>Last Visit        :    </strong> {{ patient.last_visit_date }}
+    </pre></td>
+        <td style="vertical-align: top; padding-left: 50px;">
+            <img src="/media/{{patient.photo}}" width="250" height="250" /></td>
+    </tr>
+    </table>
+    <a href="{% url 'patient_update' patient.pk %}">Edit</a> |
+    <a href="{% url 'patient_delete' patient.pk %}">Delete</a> |
+    <a href="{% url 'patient_list'  %}">Go back to the patients list</a>
+    <hr>
+    <h2>Treatment</h2>
+    {% if patient.treatment_set.exists %}
+        <ul>
+    {% for treatment in patient.treatment_set.all %}
+        <li><strong>Disease : </strong> {{ treatment.disease }}</li>
+        <li><strong>Treatment : </strong> {{ treatment.medical_treatment }}</li>
+        <li><strong>Treatment date : </strong> {{ treatment.treatment_date }}</li>
+        {% endfor %}
+        </ul>
+        {% else %}
+        <p>No treatment found for this patient!</p>
+    {% endif %}
+    <a href="{% url 'add_treatment' patient.id %}"><button class="btn btn-primary">Add Treatment</button></a>
+
+
+    <br /><hr>
+    <h2>Appointment</h2>
+        {% if patient.appointment_set.exists %}
+        <ul>
+    {% for appointment in patient.appointment_set.all %}
+        <li><strong>Appointment : </strong> {{ appointment.appointment }}</li>
+        {% endfor %}
+        </ul>
+        {% else %}
+        <p>No appointment found for this patient!</p>
+    {% endif %}
+    <a href="{% url 'add_appointment' patient.id %}"><button class="btn btn-primary">Add Appointment</button></a>
+
+
+{% endblock %}

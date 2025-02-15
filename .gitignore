@@ -1,0 +1,20 @@
+# Environnement virtuel
+venv/
+
+# Fichiers de base de données SQLite
+*.sqlite3
+
+# Fichiers de migrations
+__pycache__/
+*.pyc
+*.pyo
+
+# Fichiers de configuration locaux
+*.log
+
+# Fichiers PyCharm
+.idea/
+
+# Fichiers de configuration de l'OS
+.DS_Store
+Thumbs.db
