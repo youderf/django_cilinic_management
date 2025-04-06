@@ -12,7 +12,7 @@
 A web-based clinic management system built with Django to handle patient medication, appointments, and prescriptions. Features include role-based authentication, scheduling, and medical data management. Supports PostgreSQL/SQLite and can be deployed with Docker or on cloud platforms.
 # Relational Model
 This medical clinic management project is based on the relational data model specified in the following diagram:<br /><br />
-![Diagram projet](https://raw.githubusercontent.com/youderf/django_cilinic_management/main/images/diagram.png)
+![Diagram projet](https://raw.githubusercontent.com/youderf/django_cilinic_management/main/images/diagram-sql-django-clinic-management.png)
 # Project Preview
 <br /><br />
 ![Aperçu du projet](https://raw.githubusercontent.com/youderf/django_cilinic_management/main/images/django_clinic_management_system.png)
